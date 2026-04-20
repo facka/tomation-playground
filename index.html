@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomation Playground</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Login Section ===== -->
+  <main id="app">
+    <h1>Tomation Playground</h1>
+    <p>A stable playground for automated browser tests.</p>
+
+    <section id="login-section">
+      <h2>Login</h2>
+
+      <label for="username-input">Username</label>
+      <input id="username-input" type="text" placeholder="Username" autocomplete="username" />
+
+      <label for="password-input">Password</label>
+      <input id="password-input" type="password" placeholder="Password" autocomplete="current-password" />
+
+      <button id="login-button">Login</button>
+
+      <!-- Login result is written here by app.js; aria-live announces changes to screen readers -->
+      <p id="login-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- ===== Async Scenario ===== -->
+    <!-- app.js injects #delayed-button here after 2 seconds -->
+    <section id="async-section">
+      <h2>Async Scenario</h2>
+      <p>A button will appear below after 2 seconds (used to test retry/wait logic).</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
